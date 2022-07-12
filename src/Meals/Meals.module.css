@@ -1,0 +1,9 @@
+.flexcon {
+  position: relative;
+  width: 50%;
+  margin: auto;
+}
+
+.btncart {
+  position: absolute;
+}

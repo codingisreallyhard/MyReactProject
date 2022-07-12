@@ -1,0 +1,40 @@
+.mealitem {
+  padding: 20px;
+  font-size: 18px;
+  list-style: none;
+  position: relative;
+}
+
+.mealtitle {
+  color: red;
+  padding-bottom: 20px;
+  font-size: 32px;
+}
+body {
+  background-color: rgb(102, 46, 1);
+}
+
+.description {
+  padding-bottom: 12px;
+  color: black;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.btncart {
+  transition-duration: 0.4s;
+  padding: 20px;
+  font-size: large;
+  border-radius: 8px;
+  position: absolute;
+  transform: translate(450%, -90%);
+}
+.btncart:hover {
+  background-color: #333;
+  color: white;
+}
