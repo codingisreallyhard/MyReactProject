@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import Cart from "../Cart/Cart";
 import classes from "./Navigation.module.css";
 
 const Navigation = () => {
@@ -23,6 +24,7 @@ const Navigation = () => {
         >
           Favorites
         </NavLink>
+        <Cart />
       </nav>
     </Fragment>
   );

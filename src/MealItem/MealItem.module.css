@@ -10,9 +10,6 @@
   padding-bottom: 20px;
   font-size: 32px;
 }
-body {
-  background-color: rgb(102, 46, 1);
-}
 
 .description {
   padding-bottom: 12px;
@@ -32,7 +29,7 @@ body {
   font-size: large;
   border-radius: 8px;
   position: absolute;
-  transform: translate(450%, -90%);
+  transform: translate(270%, -90%);
 }
 .btncart:hover {
   background-color: #333;

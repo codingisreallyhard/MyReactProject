@@ -6,7 +6,7 @@ import MealsPage from "./pages/MealsPage";
 import Favorites from "./pages/Favorites";
 import MainPage from "./pages/MainPage";
 import MealItem from "./MealItem/MealItem";
-
+import "./App.css";
 const DUMMY_DATA = [
   {
     id: "m1",
