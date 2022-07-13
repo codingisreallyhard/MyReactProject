@@ -17,7 +17,9 @@ const Navigation = (props) => {
         <NavLink to="/Favorites" className={classes.navlink}>
           Favorites
         </NavLink>
-        <CartButton onClick={props.onShowCart} />
+        <header className={classes.header}>
+          <CartButton onClick={props.onShowCart} />
+        </header>
       </nav>
     </Fragment>
   );

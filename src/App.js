@@ -47,9 +47,9 @@ function App() {
   return (
     <div>
       <nav>
-        <Navigation />
+        <Navigation onShowCart={showCartHandler} />
       </nav>
-      <div>{cartShow && <Cart onClose={hideCartHandler} />}</div>
+      {cartShow && <Cart onClose={hideCartHandler} />}
       <main>
         <Routes>
           <Route path="/Favorites" element={<Favorites />}></Route>

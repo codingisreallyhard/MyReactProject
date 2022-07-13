@@ -15,7 +15,7 @@ export default function Cart(props) {
   };
 
   const cartItems = (
-    <ul>
+    <ul className={classes["cart-items"]}>
       {cartContext.items.map((item) => (
         <CartItem
           key={item.id}
@@ -36,7 +36,7 @@ export default function Cart(props) {
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
-      <div>
+      <div className={classes.action}>
         <button className={classes["button--alt"]} onClick={props.onClose}>
           Close
         </button>

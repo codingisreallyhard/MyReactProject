@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import CartContext from "../Cart/CartContext";
 import classes from "./CartButton.module.css";
 const CartButton = (props) => {
@@ -10,7 +10,7 @@ const CartButton = (props) => {
   }, 0);
 
   return (
-    <button className={classes.button} onClick={props.showCartHandler}>
+    <button className={classes.button} onClick={props.onClick}>
       <span>Your Cart</span>
       <span>{numCartItems}</span>
     </button>
