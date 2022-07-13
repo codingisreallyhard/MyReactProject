@@ -12,7 +12,7 @@ const ModalOverlay = (props) => {
   );
 };
 
-function Modal() {
+function Modal(props) {
   return (
     <div>
       <ModalOverlay>{props.children}</ModalOverlay>

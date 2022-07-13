@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Meals from "./Meals/Meals";
 import Navigation from "./UI/Navigation";
 import { Route, Redirect, Routes } from "react-router-dom";
@@ -7,6 +7,7 @@ import Favorites from "./pages/Favorites";
 import MainPage from "./pages/MainPage";
 import MealItem from "./MealItem/MealItem";
 import "./App.css";
+import Cart from "./Cart/Cart";
 const DUMMY_DATA = [
   {
     id: "m1",
@@ -35,12 +36,20 @@ const DUMMY_DATA = [
 ];
 
 function App() {
+  const [cartShow, setCartShow] = useState(false);
+
+  const showCartHandler = () => {
+    setCartShow(true);
+  };
+  const hideCartHandler = () => {
+    setCartShow(false);
+  };
   return (
     <div>
       <nav>
         <Navigation />
       </nav>
-
+      <div>{cartShow && <Cart onClose={hideCartHandler} />}</div>
       <main>
         <Routes>
           <Route path="/Favorites" element={<Favorites />}></Route>

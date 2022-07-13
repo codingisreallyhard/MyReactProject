@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import CartContext from "./CartContext";
 import CartItem from "./CartItem";
-
+import classes from "./Cart.module.css";
+import Modal from "../UI/Modal";
 export default function Cart(props) {
   const cartContext = useContext(CartContext);
   const totalAmount = `${cartContext.totalAmount.toFixed(2)}`;
@@ -29,13 +30,17 @@ export default function Cart(props) {
   );
 
   return (
-    <div>
+    <Modal onClose={props.onClose}>
       {cartItems}
-      <div>
+      <div className={classes.total}>
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
-      <button onClick={props.onClose}>Close</button>
-    </div>
+      <div>
+        <button className={classes["button--alt"]} onClick={props.onClose}>
+          Close
+        </button>
+      </div>
+    </Modal>
   );
 }
