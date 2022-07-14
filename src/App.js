@@ -8,6 +8,7 @@ import MainPage from "./pages/MainPage";
 import MealItem from "./MealItem/MealItem";
 import "./App.css";
 import Cart from "./Cart/Cart";
+import CartProvider from "./Cart/CartProvider";
 const DUMMY_DATA = [
   {
     id: "m1",
@@ -45,19 +46,21 @@ function App() {
     setCartShow(false);
   };
   return (
-    <div>
-      <nav>
-        <Navigation onShowCart={showCartHandler} />
-      </nav>
-      {cartShow && <Cart onClose={hideCartHandler} />}
-      <main>
-        <Routes>
-          <Route path="/Favorites" element={<Favorites />}></Route>
-          <Route path="/" element={<MainPage />}></Route>
-          <Route path="/meals" element={<MealsPage />}></Route>
-        </Routes>
-      </main>
-    </div>
+    <CartProvider>
+      <div>
+        <nav>
+          <Navigation onShowCart={showCartHandler} />
+        </nav>
+        {cartShow && <Cart onClose={hideCartHandler} />}
+        <main>
+          <Routes>
+            <Route path="/Favorites" element={<Favorites />}></Route>
+            <Route path="/" element={<MainPage />}></Route>
+            <Route path="/meals" element={<MealsPage />}></Route>
+          </Routes>
+        </main>
+      </div>
+    </CartProvider>
   );
 }
 

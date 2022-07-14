@@ -35,9 +35,21 @@
   border-color: #5a1a01;
   color: white;
 }
+.buttonclose {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #8a2b06;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
 
-.actions .button--alt {
-  color: #8a2b06;
+.buttonclose:hover,
+.buttonclose:active {
+  background-color: #5a1a01;
+  transition: 0.3s;
+  color: white;
 }
 
 .actions .button {

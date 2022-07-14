@@ -22,8 +22,8 @@ export default function Cart(props) {
           name={item.name}
           amount={item.amount}
           price={item.price}
-          onRemove={cartItemRemoveHandler}
-          onAdd={cartItemAddHandler}
+          onRemove={cartItemRemoveHandler.bind(null, item.id)}
+          onAdd={cartItemAddHandler.bind(null, item)}
         />
       ))}
     </ul>
@@ -37,9 +37,10 @@ export default function Cart(props) {
         <span>{totalAmount}</span>
       </div>
       <div className={classes.action}>
-        <button className={classes["button--alt"]} onClick={props.onClose}>
+        <button className={classes.buttonclose} onClick={props.onClose}>
           Close
         </button>
+        {hasItems && <button className={classes.button}>Order</button>}
       </div>
     </Modal>
   );
