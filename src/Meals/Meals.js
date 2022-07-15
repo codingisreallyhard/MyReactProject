@@ -3,11 +3,11 @@ import MealItem from "../MealItem/MealItem";
 import Card from "../UI/Card";
 import classes from "./Meals.module.css";
 
-function Meals(props) {
-  const DUMMY_MEALS = [
+const Meals = (props) => {
+  const data = [
     {
       id: "m1",
-      title: "Snitzel",
+      meal: "Snitzel",
       description: "Good food",
       price: 23.99,
     },
@@ -30,23 +30,18 @@ function Meals(props) {
       price: 11.99,
     },
   ];
-  const mealsList = DUMMY_MEALS.map((meal) => (
-    <MealItem
-      id={meal.id}
-      key={meal.id}
-      title={meal.title}
-      description={meal.description}
-      price={meal.price}
-    />
-  ));
-  return (
-    <Fragment>
-      <section className={classes.flexcon}>
-        <ul>{mealsList}</ul>
-      </section>
-      <div></div>
-    </Fragment>
-  );
-}
 
+  // const { onAdd } = props;
+  // const mealsList = data.map((meal) => (
+  //   <MealItem
+  //     id={meal.id}
+  //     key={meal.id}
+  //     title={meal.title}
+  //     description={meal.description}
+  //     price={meal.price}
+  //     onAdd={onAdd}
+  //   />
+  // ));
+  // return <div>{mealsList}</div>;
+};
 export default Meals;

@@ -1,0 +1,9 @@
+{cartItemsNull.map((item) => (
+    <div key={item.id}>
+      <div>{item.name}</div>
+      <div>
+        <button>-</button>
+        <button onClick={() => onAdd(item)}>+</button>
+      </div>
+    </div>
+  ))}
